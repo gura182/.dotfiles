@@ -3,12 +3,16 @@ nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 nnoremap <C-h> b
 nnoremap <C-l> w
+" Easy movement in visual mode
+xnoremap <C-h> b
+xnoremap <C-l> w
 
 " Editing Key maps
 xnoremap p "0p
 
-nmap <C-s> :w<CR>
-nmap <C-q> :q<CR>
+
+nmap <C-s> :w<CR>       " save file
+nmap <C-q> :q<CR>       " quit file
 
 " Set numbre, relativenumber and white spaces
 " nmap <C-N><C-N> :set number!<CR>
