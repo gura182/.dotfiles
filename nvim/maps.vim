@@ -10,9 +10,12 @@ xnoremap <C-l> w
 " Editing Key maps
 xnoremap p "0p
 
-
-nmap <C-s> :w<CR>       " save file
-nmap <C-q> :q<CR>       " quit file
+" Save file
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+" Quit file
+nnoremap <C-q> :q<CR>
+inoremap <C-q> <Esc>:q<CR>
 
 " Move lines Up/Down
 nnoremap <A-Down> :m .+1<CR>==
@@ -63,6 +66,13 @@ nmap <leader>gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>cr :CocRestart
+" Show all diagnostics.
+nnoremap <silent><nowait> <leader>d  :<C-u>CocList diagnostics<cr>
+" Do default action for next item.
+nnoremap <silent><nowait> <leader>cj  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent><nowait> <leader>ck  :<C-u>CocPrev<CR>
+
 " The next works for vim
 "inoremap <silent><expr> <Nul> coc#refresh()
 inoremap <silent><expr> <c-space> coc#refresh()
