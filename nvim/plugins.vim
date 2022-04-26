@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Git Tools
     Plug 'tpope/vim-fugitive'
+    Plug 'git@github.com:airblade/vim-gitgutter.git'
 
 " Syntax
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
