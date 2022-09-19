@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 "    Plug 'jremmen/vim-ripgrep'
-    Plug 'git@github.com:kien/ctrlp.vim.git'
+    Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
     Plug 'mbbill/undotree'
 
 " Git Tools

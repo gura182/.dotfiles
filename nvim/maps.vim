@@ -46,7 +46,8 @@ nnoremap <leader>b :wincmd s<CR>    " split in a horizontal windows
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
-nnoremap <C-p> :GFiles<CR>
+" CtrlP Fuzzy file config
+nnoremap <C-p> :CtrlP<CR>
 
 " Clear search highlight
 nnoremap <silent> <leader>a :<C-u>nohlsearch<CR><C-l>
