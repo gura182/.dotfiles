@@ -69,6 +69,8 @@ nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>cr :CocRestart
 " Show all diagnostics.
 nnoremap <silent><nowait> <leader>d  :<C-u>CocList diagnostics<cr>
+" Find symbol of current document.
+nnoremap <silent><nowait> <leader>o  :<C-u>CocList outline<cr>
 " Do default action for next item.
 nnoremap <silent><nowait> <leader>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
