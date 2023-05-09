@@ -1,3 +1,6 @@
+" Disable annoying conmmand history
+nnoremap <silent> q <nop>
+nnoremap <silent> q: <nop>
 " Easy movement
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
@@ -17,6 +20,8 @@ inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-q> :q<CR>
 inoremap <C-q> <Esc>:q<CR>
 
+" Delete current line
+nnoremap <C-d> dd
 " Move lines Up/Down
 nnoremap <A-Down> :m .+1<CR>==
 nnoremap <A-Up> :m .-2<CR>==
@@ -39,6 +44,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>v :wincmd v<CR>    " split in a vertical windows
@@ -48,9 +54,17 @@ nnoremap <silent> <leader>- :vertical resize -5<CR>
 
 " CtrlP Fuzzy file config
 nnoremap <C-p> :CtrlP<CR>
+nnoremap <C-b> :CtrlPBuffer<CR>
 
 " Clear search highlight
 nnoremap <silent> <leader>a :<C-u>nohlsearch<CR><C-l>
+" Center screen after incremental searches
+noremap n nzz
+noremap N Nzz
+noremap * *zz
+noremap # #zz
+noremap g* g*zz
+noremap g# g#zz
 
 " YCM key maps
 " The best part.
@@ -68,9 +82,9 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>cr :CocRestart
 " Show all diagnostics.
-nnoremap <silent><nowait> <leader>d  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>co  :<C-u>CocList outline<cr>
 " Do default action for next item.
 nnoremap <silent><nowait> <leader>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -84,6 +98,12 @@ map <F4> :CocCommand clangd.switchSourceHeader<CR>
 
 " Source/Header switch key map
 "map <F4> :call CurtineIncSw()<CR>
+
+" GitGutter mappings
+xmap ghs <Plug>(GitGutterStageHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
 " Quick semicolon
 nnoremap <leader>; $a;<Esc>
